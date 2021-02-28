@@ -6,4 +6,4 @@
 
 ## Packages:
 
-* Python 3.6, FasAPI, uvicorn
+* Python 3.6, FastAPI, uvicorn
