@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 fastapi = "*"
 uvicorn = {extras = ["standard"],version = "*"}
+tortoise-orm = "*"
 
 [requires]
 python_version = "3.6"
