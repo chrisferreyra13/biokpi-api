@@ -6,4 +6,4 @@
 
 ## Packages:
 
-* Python 3.8, FastAPI, hypcorn, Tortoise
+* Python 3.8, FastAPI, hypercorn, Tortoise
