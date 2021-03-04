@@ -55,8 +55,8 @@ def delete_biokpi(biokpi_id: int):
 
 register_tortoise(
     app,
-    db='sqlite://db.sqlite3',
-    modules={'models': ['main']},
+    db='sqlite://db.sqlite3', # La base de datos que usas
+    modules={'models': ['main']}, # Donde estan los modelos
     generate_schemas=True,
     add_exception_handlers=True
 )

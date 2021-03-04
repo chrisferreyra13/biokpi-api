@@ -11,4 +11,4 @@ uvicorn = {extras = ["standard"],version = "*"}
 tortoise-orm = "*"
 
 [requires]
-python_version = "3.6"
+python_version = "3.8"
