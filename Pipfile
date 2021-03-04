@@ -9,6 +9,7 @@ verify_ssl = true
 fastapi = "*"
 uvicorn = {extras = ["standard"],version = "*"}
 tortoise-orm = "*"
+hypercorn = "*"
 
 [requires]
 python_version = "3.8"
