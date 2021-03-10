@@ -13,23 +13,23 @@ BiokpiIn_Pydantic=pydantic_model_creator(Biokpi, name='BiokpiIn', exclude_readon
 
 @app.get('/')
 def index():
-    return {'key':'value'}
+    return {'id':'value'}
 
-@app.get('/biokpis')
+@app.get('/v1/biokpis')
 async def get_biokpis():
     return await Biokpi_Pydantic.from_queryset(Biokpi.all())
 
-@app.get('/biokpis/{biokpi_id}')
+@app.get('/v1/biokpis/{biokpi_id}')
 async def get_biokpi(biokpi_id: int):
     return await Biokpi_Pydantic.from_queryset_single(Biokpi.get(id=biokpi_id))
 
-@app.post('/biokpis')
+@app.post('/v1/biokpis')
 async def create_biokpi(biokpi: BiokpiIn_Pydantic):
     biokpi_obj= await Biokpi.create(**biokpi.dict(exclude_unset=True))
     return await Biokpi_Pydantic.from_tortoise_orm(biokpi_obj)
 
 
-@app.delete('/biokpis/{biokpi_id}')
+@app.delete('/v1/biokpis/{biokpi_id}')
 async def delete_biokpi(biokpi_id: int):
     await Biokpi.filter(id=biokpi_id).delete()
     return {}
